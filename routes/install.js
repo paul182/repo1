@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var shopifyAPI = require('shopify-node-api');
+var app = express();
 
 var shopifyConfig = {
 	  shop: 'duffwood-dev.myshopify.com',
@@ -18,7 +19,7 @@ router.use(function(req, res, next) {
     next(); // make sure we go to the next routes and don't stop here
 });
 
-express.get('/auth*').get(function(req, res) {
+app.get('/auth*').get(function(req, res) {
 	var host = req.get('host');
 	console.log('host = ' + host);
 	var Shopify = new shopifyAPI(shopifyConfig);
@@ -32,7 +33,7 @@ express.get('/auth*').get(function(req, res) {
 	res.redirect(auth_url);
 });
 
-express.get('/finish_auth*', function(req, res){
+app.get('/finish_auth*', function(req, res){
 
   var Shopify = new shopifyAPI(shopifyConfig) // You need to pass in your config here
   var query_params = req.query;
