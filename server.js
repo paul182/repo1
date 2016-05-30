@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 
 var installRouter = require('./routes/install');
+var searchRouter = require('./routes/search);
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -15,6 +16,9 @@ app.use(express.static(__dirname + '/public'));
 
 // Shopify install routes
 app.use('/install', installRouter);
+
+// Shopify radius search routes
+app.use('/search', searchRouter);
 
 // set the home page route
 app.get('/', function(req, res) {
