@@ -1,7 +1,7 @@
-r express = require('express');
+var express = require('express');
 var app = express();
 
-// var installRouter = require('./routes/install');
+var installRouter = require('./routes/install');
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 // Shopify install routes
-// app.use('/install', installRouter);
+app.use('/install', installRouter);
 
 // set the home page route
 app.get('/', function(req, res) {
@@ -26,4 +26,3 @@ app.get('/', function(req, res) {
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
-
