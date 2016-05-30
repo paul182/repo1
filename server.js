@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 var installRouter = require('./routes/install');
-var searchRouter = require('./routes/search);
+var searchRouter = require('./routes/search');
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
