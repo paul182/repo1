@@ -7,7 +7,7 @@ var shopifyConfig = {
 	  shopify_api_key: '9fd2db7d3b4efdeb53aede64cc42e7fa', // Your API key
 	  shopify_shared_secret: '89674546b386d218ddee866c390a5cb4', // Your Shared Secret
 	  shopify_scope: 'read_products, write_products',
-	  redirect_uri: 'http://duffshop.herokuapp.com/install/finish_auth?',
+	  redirect_uri: 'https://duffshop.herokuapp.com/install/finish_auth',
 	  nonce: 'duffwood-dev' // you must provide a randomly selected value unique for each authorization request
 };
 
