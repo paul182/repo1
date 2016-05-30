@@ -1,4 +1,8 @@
-heroku-node
-===========
+PPAUL-HEROKU-NODE-SHOPIFY
+=========================
 
-Code for the tutorial by @sevilayha: Deploying Node Apps to Heroku
+Started from the code for the tutorial by @sevilayha: Deploying Node Apps to Heroku
+
+Customized to make it own
+
+
