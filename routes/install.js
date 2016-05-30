@@ -14,7 +14,7 @@ var shopifyConfig = {
 // middleware to use for all requests (eg: xss check)
 router.use(function(req, res, next) {
     // do logging
-    logger.info('in middleware router');
+    console.log('in middleware router');
     next(); // make sure we go to the next routes and don't stop here
 });
 
