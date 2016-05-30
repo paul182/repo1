@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 // Shopify install routes
-app.use('/install', installRouter);
+// app.use('/install', installRouter);
 
 // set the home page route
 app.get('/', function(req, res) {
