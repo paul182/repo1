@@ -18,7 +18,7 @@ router.use(function(req, res, next) {
     next(); // make sure we go to the next routes and don't stop here
 });
 
-router.get('/auth*').get(function(req, res) {
+express.get('/auth*').get(function(req, res) {
 	var host = req.get('host');
 	console.log('host = ' + host);
 	var Shopify = new shopifyAPI(shopifyConfig);
@@ -32,7 +32,7 @@ router.get('/auth*').get(function(req, res) {
 	res.redirect(auth_url);
 });
 
-router.get('/finish_auth*', function(req, res){
+express.get('/finish_auth*', function(req, res){
 
   var Shopify = new shopifyAPI(shopifyConfig) // You need to pass in your config here
   var query_params = req.query;
