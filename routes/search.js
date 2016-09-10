@@ -13,10 +13,7 @@ router.get('/testjson', function(req, res) {
 	console.log('host = ' + host);
 
         res.setHeader('Content-Type', 'application/json');
-        res.write('
-		{"status" : "SUCCESS",
-		"message" : "JSON Hello World"
-		}'); 
+
 	res.end();
 });
 
